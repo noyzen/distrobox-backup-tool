@@ -3,6 +3,7 @@ Here is a help README for your Distrobox Backup Tool.
 # 📦 Distrobox Backup Tool
 
 This is a command-line tool written in Go to simplify the management of your Distrobox containers. It provides an interactive menu to easily back up, restore, delete, and edit your containers.
+THIS PROGRAM CREATED BY AI, USE IT WITH CAUTION.
 
 -----
 
