@@ -9,8 +9,8 @@ THIS PROGRAM CREATED BY AI, USE IT WITH CAUTION.
 
 ## ✨ Features
 
-  * **Backup:** Create a `.tar` archive of your selected container, which can be stored as a backup.
-  * **Restore:** Restore a container from a `.tar` backup file. You can choose to restore it as a standard or isolated container.
+  * **Backup:** Create a `.tar` archive of your selected container, with all data and setting, which can be stored as a backup.
+  * **Restore:** Restore a container from a `.tar` backup fileas a new container! You can choose to restore it as a standard or isolated container.
   * **Delete:** Permanently remove an existing Distrobox container.
   * **Edit:** Convert a container from a "standard" configuration (sharing the host's home directory) to an "isolated" one (with a dedicated home directory), or vice-versa.
 
