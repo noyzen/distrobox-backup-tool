@@ -276,8 +276,16 @@ func handleRestore() {
 		return
 	}
 
+	// 4.5. Choose Init System
+	fmt.Println()
+	fmt.Printf("%s> Enable systemd (init) for this container? (Useful for services like Docker) (y/N): %s", colorBold, colorReset)
+	enableInit := confirmAction()
+
 	// 5. Create Distrobox
 	args := []string{"--name", containerName, "--image", loadedImage}
+	if enableInit {
+		args = append(args, "--init")
+	}
 
 	done = make(chan bool)
 	go showSpinner("Creating container...", done)
@@ -297,6 +305,10 @@ func handleRestore() {
 		logInfo(fmt.Sprintf("Container home will be at: %s", isolatedHomePath))
 	} else {
 		logInfo(fmt.Sprintf("Creating new %sSTANDARD%s container '%s'...", colorBold, colorReset, containerName))
+	}
+
+	if enableInit {
+		logInfo("Systemd (init) support is ENABLED.")
 	}
 
 	_, err = runCommand("distrobox-create", args...)
